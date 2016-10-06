@@ -1,6 +1,6 @@
 # Introduction
 
-This repository is indented to provide scripts to modify MTCD ROMs for many of those Chinese headunits you can buy on Ebay, Alibaba etc. 
+This repository is intended to provide scripts to crate custom MTCD ROMs for many of those Chinese headunits you can buy on Ebay, Alibaba etc. 
 
 # Requirements
 
@@ -18,8 +18,8 @@ e.g. on Ubuntu 16.04 LTS use this:
 1. install dialog tool. e.g. `apt-get install dialog`
 2. git clone https://github.com/da-anton/MTCD_ROM-cooking/
 3. cd MTCD_ROM-cooking
-4. download a MTCD ROM to the folder orig_dupdate.img
+4. download a MTCD ROM to the folder orig_image (only dupdate.img!)
 5. ./start_mod.sh
 6. choose what you want
-7. the final ROM is in the folder mod_dupdate.img
+7. the final ROM is in the folder mod_image
 
