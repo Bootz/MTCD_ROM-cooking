@@ -15,10 +15,11 @@ e.g. on Ubuntu 16.04 LTS use this:
 
 # Installation
 
-1. git clone https://github.com/da-anton/MTCD_ROM-cooking/
-2. cd MTCD_ROM-cooking
-3. download a MTCD ROM to the folder orig_dupdate.img
-4. ./start_mod.sh
-5. choose what you want
-6. the final ROM is in the folder mod_dupdate.img
+1. install dialog tool. e.g. `apt-get install dialog`
+2. git clone https://github.com/da-anton/MTCD_ROM-cooking/
+3. cd MTCD_ROM-cooking
+4. download a MTCD ROM to the folder orig_dupdate.img
+5. ./start_mod.sh
+6. choose what you want
+7. the final ROM is in the folder mod_dupdate.img
 
