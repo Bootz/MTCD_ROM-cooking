@@ -23,7 +23,7 @@ then
 fi
 
 
-if [ choice!=""]; then
+if [ $choice!="" ]; then
 
 
 	dialog --title "Include add-ons" \--yesno "Are you sure you want to add \n $TEMP to your image?" 7 60
