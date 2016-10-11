@@ -6,6 +6,7 @@ This repository is intended to provide scripts to crate custom MTCD ROMs for man
 
 - Linux 32bit or 64bit
 - git
+- some command line tools
 
 *If you use a 64bit Linux installation you have to install 32bit libs to get the support tools running!*
 
@@ -15,7 +16,7 @@ e.g. on Ubuntu 16.04 LTS use this:
 
 # Installation
 
-1. install dialog tool. e.g. `apt-get install dialog`
+1. install missing tool chain e.g. on Ubuntu 16.04 `apt-get install dialog wget unzip`
 2. git clone https://github.com/da-anton/MTCD_ROM-cooking/
 3. cd MTCD_ROM-cooking
 4. download a MTCD ROM to the folder orig_image (only dupdate.img!)
