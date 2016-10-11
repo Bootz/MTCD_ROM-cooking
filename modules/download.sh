@@ -1,6 +1,6 @@
 # check if already a ROM is in place. Download JY ROM from Google Drive
 
-URL="ttps://doc-0c-7o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/b36fpn5jv5qf7rcieakbs4poqljp7b8g/1476201600000/05419585178365164922/*/0BzxkkrRwpR3Ea0oxTHRXb0Uwb0U?e=download"
+URL="https://doc-0c-7o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/b36fpn5jv5qf7rcieakbs4poqljp7b8g/1476201600000/05419585178365164922/*/0BzxkkrRwpR3Ea0oxTHRXb0Uwb0U?e=download"
 
 if [ ! -f $WORKDIR/orig_image/dupdate.img ]; then
 
