@@ -32,3 +32,4 @@ case "$menuitem" in
 	255) functClean & exit 1;;
         *)    functClean & exit 1
 esac
+

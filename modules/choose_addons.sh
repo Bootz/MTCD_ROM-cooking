@@ -47,3 +47,6 @@ if [ $choice!="" ]; then
 	esac
 
 fi
+
+unset choices
+unset TEMP

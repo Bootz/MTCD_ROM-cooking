@@ -45,3 +45,7 @@ case $response in
 
    255) functClean & exit;;
 esac
+
+unset choices
+unset response
+unset TEMP 

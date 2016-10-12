@@ -18,9 +18,9 @@ case $response in
 
 
 		# install apk
-		mkdir $WORKDIR/mount_path/app/SuperSU
-		chmod 0755 $WORKDIR/mount_path/app/SuperSU
-		copy_chmod $COMPATH/Superuser.apk $WORKDIR/mount_path/app/SuperSU/ 0644
+		mkdir $WORKDIR/mount_path/app/Superuser
+		copy_chmod $COMPATH/Superuser.apk $WORKDIR/mount_path/app/Superuser/ 0644
+		chmod 0755 $WORKDIR/mount_path/app/Superuser
 
 		# other stuff
 		mkdir $WORKDIR/mount_path/bin/.ext
@@ -50,3 +50,4 @@ case $response in
 255) ;;
 esac
 
+unset response

@@ -16,3 +16,5 @@
 
         255) ;;
         esac
+
+unset response

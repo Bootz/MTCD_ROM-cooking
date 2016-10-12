@@ -36,14 +36,14 @@ function functClean
 . $WORKDIR/modules/language.sh
 . $WORKDIR/modules/patching.sh
 . $WORKDIR/modules/unify_memory.sh
-#. $WORKDIR/modules/install_supersu.sh
+. $WORKDIR/modules/install_supersu.sh
 
-# baking ROM
-echo "creating final image"
-$WORKDIR/helper/imgrepackerrk $WORKDIR/working/dupdate.img.dump >> $LOGFILE 2>&1
+# must be the last one as we have to mount a different image
+. $WORKDIR/modules/remove_oem_apps.sh
 
-echo "moving final image"
-mv $WORKDIR/working/dupdate.img $WORKDIR/output_image >> $LOGFILE 2>&1
+# baking rom
+. $WORKDIR/modules/baking_rom.sh
+
 
 # cleaning up
 functClean
