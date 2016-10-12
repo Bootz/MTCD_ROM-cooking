@@ -37,3 +37,12 @@ dalvik.vm.isa.arm.features=default
 dalvik.vm.lockprof.threshold=250
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 persist.sys.dalvik.vm.lib.2=libart.so
+
+# ART tuning for Android 5.1; not sure if really necessary
+art.vm.heapstartsize=8m
+art.vm.heapgrowthlimit=100m
+art.vm.heapsize=174m
+art.vm.heaptargetutilization=0.75
+art.vm.heapminfree=512kb
+art.vm.heapmaxfree=8m
+art.vm.dexopt-flags=m=v,o=y
