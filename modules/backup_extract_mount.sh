@@ -3,8 +3,9 @@ echo "creating working copy of ROM image"
 cp -a $WORKDIR/orig_image/dupdate.img $WORKDIR/working/ >> $LOGFILE 2>&1
 
 # extract image
-echo "extracting image"
-$WORKDIR/helper/imgrepackerrk $WORKDIR/working/dupdate.img >> $LOGFILE 2>&1
+echo "extracting image to $WORKDIR/working/"
+$WORKDIR/helper/imgrepackerrk /mono $WORKDIR/working/dupdate.img >> $LOGFILE 2>&1
+$WORKDIR/helper/imgrepackerrk /mono /2nd $WORKDIR/working/dupdate.img >> $LOGFILE 2>&1
 
 # mounting image
 echo

@@ -1,7 +1,7 @@
 #!/bin/bash
 WORKDIR=$(pwd)
 _temp="$WORKDIR/working/answer.$$"
-LOGFILE=$WORKDIR/working/log
+LOGFILE=$WORKDIR/logfile
 
 # clean up if process is cancelled
 function functClean
@@ -18,6 +18,10 @@ function functClean
 	echo
 }
 
+# remove old logfile
+if [ -f $LOGFILE ]; then
+	rm $LOGFILE
+fi
 
 # download if necessary
 . $WORKDIR/modules/download.sh
@@ -34,9 +38,13 @@ function functClean
 . $WORKDIR/modules/timeformat.sh
 . $WORKDIR/modules/choose_addons.sh
 . $WORKDIR/modules/language.sh
-. $WORKDIR/modules/patching.sh
+. $WORKDIR/modules/performance.sh
 . $WORKDIR/modules/unify_memory.sh
 . $WORKDIR/modules/install_supersu.sh
+
+# not working or not necessary
+#. $WORKDIR/modules/enable_init.d.sh
+#. $WORKDIR/modules/tune_cpu.sh
 
 # must be the last one as we have to mount a different image
 . $WORKDIR/modules/remove_oem_apps.sh
@@ -51,4 +59,5 @@ functClean
 echo
 echo "finished!!!"
 echo "your modified ROM is here: $WORKDIR/output_image/dupdate.img"
+echo "logilfe is here: $WORKDIR/logfile"
 echo

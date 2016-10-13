@@ -1,0 +1,30 @@
+78c78,79
+< service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+---
+> #service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+> service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/internal_sd
+155a157,162
+>     symlink /mnt/external_sd /storage/external_sd
+>     symlink /mnt/external_sd2 /storage/external_sd2
+>     symlink /mnt/usb_storage /storage/usb_storage
+>     symlink /mnt/usb_storage2 /storage/usb_storage2
+>     symlink /mnt/usb_storage2 /storage/usb_storage3
+>     symlink /mnt/usb_storage2 /storage/usb_storage4
+162a170,175
+>     symlink /mnt/external_sd /storage/external_sd
+>     symlink /mnt/external_sd2 /storage/external_sd2
+>     symlink /mnt/usb_storage /storage/usb_storage
+>     symlink /mnt/usb_storage2 /storage/usb_storage2
+>     symlink /mnt/usb_storage2 /storage/usb_storage3
+>     symlink /mnt/usb_storage2 /storage/usb_storage4
+169a183,188
+>     symlink /mnt/external_sd /storage/external_sd
+>     symlink /mnt/external_sd2 /storage/external_sd2
+>     symlink /mnt/usb_storage /storage/usb_storage
+>     symlink /mnt/usb_storage2 /storage/usb_storage2
+>     symlink /mnt/usb_storage2 /storage/usb_storage3
+>     symlink /mnt/usb_storage2 /storage/usb_storage4
+171c190
+<     stop sdcard
+---
+> #    stop sdcard

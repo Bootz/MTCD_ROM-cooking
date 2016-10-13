@@ -9,10 +9,10 @@ if [ ! -f $WORKDIR/orig_image/dupdate.img ]; then
         response=$?
         case $response in
         0) echo "Downloading and unzipping in background. Please wait as file is around 500MB!!!"
-           wget -O $WORKDIR/orig_image/current_version.img.zip "$URL"
-           unzip $WORKDIR/orig_image/current_version.img.zip
-           mv $WORKDIR/orig_image/current_version.img $WORKDIR/orig_image/dupdate-img
-           rm $WORKDIR/orig_image/current_version.img.zip
+           wget -O $WORKDIR/orig_image/current_version.img.zip "$URL" >> $LOGFILE 2>&1
+           unzip $WORKDIR/orig_image/current_version.img.zip >> $LOGFILE 2>&1
+           mv $WORKDIR/orig_image/current_version.img $WORKDIR/orig_image/dupdate-img >> $LOGFILE 2>&1
+           rm $WORKDIR/orig_image/current_version.img.zip >> $LOGFILE 2>&1
         ;;
         1) functClean & exit;;
 

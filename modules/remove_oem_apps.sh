@@ -43,9 +43,8 @@ case $response in
 
         for choice in $choices
         do
-                echo "Removing $choice"
-                echo $WORKDIR/mount_path/apk/preinstall/$choice
-                rm -rf $WORKDIR/mount_path/apk/preinstall/$choice
+                echo "Removing OEM $choice" >> $LOGFILE 2>&1
+                rm -rf $WORKDIR/mount_path/apk/preinstall/$choice >> $LOGFILE 2>&1
         done
 	;;
 

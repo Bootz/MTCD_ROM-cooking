@@ -12,22 +12,22 @@ rm $_temp
 
 case "$menuitem" in
         1)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=en/' $WORKDIR/mount_path/build.prop
-                ;;
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=en/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
+                ;; 
         2)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=nl/' $WORKDIR/mount_path/build.prop
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=nl/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
                 ;;
         3)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=fr/' $WORKDIR/mount_path/build.prop
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=fr/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
                 ;;
         4)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=de/' $WORKDIR/mount_path/build.prop
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=de/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
                 ;;
         5)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=ru/' $WORKDIR/mount_path/build.prop
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=ru/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
                 ;;
         6)
-                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=es/' $WORKDIR/mount_path/build.prop
+                sed -i 's/ro.product.locale.language.*/ro.product.locale.language=es/' $WORKDIR/mount_path/build.prop >> $LOGFILE 2>&1
                 ;;
 	255) functClean & exit 1;;
         *)    functClean & exit 1

@@ -36,7 +36,7 @@ if [ $choice!="" ]; then
 	        do
 	                echo "Adding $choice"
 	                echo $WORKDIR/mount_path/app/$choice
-	                cp -a $WORKDIR/addons/$choice $WORKDIR/mount_path/app
+	                cp -a $WORKDIR/addons/$choice $WORKDIR/mount_path/app >> $LOGFILE 2>&1
 	        done
 		;;
 	

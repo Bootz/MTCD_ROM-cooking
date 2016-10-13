@@ -35,9 +35,8 @@ case $response in
 
         for choice in $choices
         do
-                echo "Removing $choice"
-                echo $WORKDIR/mount_path/app/$choice
-                rm -rf $WORKDIR/mount_path/app/$choice
+                echo "Removing $choice" >> $LOGFILE 2>&1
+                rm -rf $WORKDIR/mount_path/app/$choice >> $LOGFILE 2>&1
         done
 	;;
 

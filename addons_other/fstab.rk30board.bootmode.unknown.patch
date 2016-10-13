@@ -1,0 +1,11 @@
+--- fstab.rk30board.bootmode.unknown	2016-10-12 17:36:34.698989006 +0200
++++ /usr/src/malaysk-rom/dupdate.img.dump/Image/boot.img.dump/fstab.rk30board.bootmode.unknown	2016-10-12 17:52:39.471519030 +0200
+@@ -13,7 +13,7 @@
+ 
+ /dev/block/rknand_oem                    /mnt/oem              ext4      noatime,nodiratime,nosuid,nodev,noauto_da_alloc,discard                       wait
+ 
+-/devices/virtual/block/rknand_user              /mnt/internal_sd     vfat      defaults        voldmanaged=internal_sd:auto,noemulatedsd
++# /devices/virtual/block/rknand_user              /mnt/internal_sd     vfat      defaults        voldmanaged=internal_sd:auto,noemulatedsd
+ 
+ 
+ /devices/platform/rk29_sdmmc.0/mmc_host/mmc           /mnt/external_sd     vfat      defaults        voldmanaged=external_sd:auto
