@@ -44,9 +44,9 @@ case $response in
 		chmod 0644 $WORKDIR/mount_path/etc/.installed_su_daemon >> $LOGFILE 2>&1
 
 		# update busybox
-		rm -f $WORKDIR/mount_path/bin/busybox* >> $LOGFILE 2>&1
-		cp $WORKDIR/addons_other/busybox $WORKDIR/mount_path/bin >> $LOGFILE 2>&1
-		chmod 0755 $WORKDIR/mount_path/bin/busybox >> $LOGFILE 2>&1
+		#rm -f $WORKDIR/mount_path/bin/busybox* >> $LOGFILE 2>&1
+		#cp $WORKDIR/addons_other/busybox $WORKDIR/mount_path/bin >> $LOGFILE 2>&1
+		#chmod 0755 $WORKDIR/mount_path/bin/busybox >> $LOGFILE 2>&1
 
 ;;
 1) ;;
