@@ -1,7 +1,7 @@
 #!/bin/bash
 # check if already a ROM is in place. Download JY ROM from Google Drive
 
-        dialog --title "unify memory" \--yesno "Do you want unify all partitions into a single big one? REMEBMER: wipe and apply factory defaults TWO times to make this work!!!" 7 60
+        dialog --title "unify memory" \--yesno "Do you want unify all partitions into a single big one? REMEMBER: wipe and apply factory defaults TWO times to make this work!!!" 7 60
 
         response=$?
         case $response in

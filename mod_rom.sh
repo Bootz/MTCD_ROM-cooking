@@ -63,5 +63,5 @@ functClean
 echo
 echo "finished!!!"
 echo "your modified ROM is here: $WORKDIR/output_image/dupdate.img"
-echo "logilfe is here: $WORKDIR/logfile"
+echo "logfile is here: $WORKDIR/logfile"
 echo
