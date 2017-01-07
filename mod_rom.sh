@@ -7,6 +7,10 @@ ELEVATE=
 #if you need elevated privs, uncomment below
 #ELEVATE=sudo
 
+#if working doesn't exist because it was deleted in a previous run
+#we need to create it
+mkdir -p $WORKDIR/working
+
 # clean up if process is cancelled
 function functClean
 {
