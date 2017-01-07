@@ -1,6 +1,6 @@
 echo "umounting everything"  >> $LOGFILE 2>&1
 echo "umounting everything"
-$ELEVATE umount $WORKDIR/mount_path >> $LOGFILE 2>&1
+umount $WORKDIR/mount_path >> $LOGFILE 2>&1
 
 # baking ROM
 echo "creating final image" >> $LOGFILE 2>&1

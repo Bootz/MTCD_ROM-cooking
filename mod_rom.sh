@@ -2,10 +2,6 @@
 WORKDIR=$(pwd)
 _temp="$WORKDIR/working/answer.$$"
 LOGFILE=$WORKDIR/logfile
-ELEVATE=
-
-#if you need elevated privs, uncomment below
-#ELEVATE=sudo
 
 #if working doesn't exist because it was deleted in a previous run
 #we need to create it

@@ -10,7 +10,7 @@ $WORKDIR/helper/imgrepackerrk /mono /2nd $WORKDIR/working/dupdate.img >> $LOGFIL
 # mounting image
 echo
 echo "mounting system.img"
-$ELEVATE mount $WORKDIR/working/dupdate.img.dump/Image/system.img $WORKDIR/mount_path >> $LOGFILE 2>&1
+mount $WORKDIR/working/dupdate.img.dump/Image/system.img $WORKDIR/mount_path >> $LOGFILE 2>&1
 
 if [ ! -d $WORKDIR/mount_path/app ]; then
     echo "mounting failed! exiting..."
