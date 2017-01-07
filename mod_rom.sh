@@ -45,6 +45,7 @@ fi
 . $WORKDIR/modules/performance.sh
 . $WORKDIR/modules/unify_memory.sh
 . $WORKDIR/modules/install_supersu.sh
+. $WORKDIR/modules/governor.sh
 
 # not working or not necessary
 #. $WORKDIR/modules/enable_init.d.sh
