@@ -38,15 +38,13 @@ case $response in
 		rm -f $WORKDIR/mount_path/bin/app_process >> $LOGFILE 2>&1
 		ln -s -r $WORKDIR/mount_path/xbin/daemonsu $WORKDIR/mount_path/bin/app_process >> $LOGFILE 2>&1
 		ln -s -r $WORKDIR/mount_path/xbin/daemonsu $WORKDIR/mount_path/bin/app_process32 >> $LOGFILE 2>&1
-		mkdir $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
-		copy_chmod $COMPATH/99SuperSUDaemon $WORKDIR/mount_path/etc/init.d/99SuperSUDaemon 0755
+
+		mkdir -p $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
+		copy_chmod $COMPATH/99SuperSUDaemon $WORKDIR/mount_path/etc/init.d/99SuperSUDaemon 0644
+      chown root:root $WORKDIR/mount_path/etc/init.d/99SuperSUDaemon
+
 		echo 1 > $WORKDIR/mount_path/etc/.installed_su_daemon
 		chmod 0644 $WORKDIR/mount_path/etc/.installed_su_daemon >> $LOGFILE 2>&1
-
-		# update busybox
-		#rm -f $WORKDIR/mount_path/bin/busybox* >> $LOGFILE 2>&1
-		#cp $WORKDIR/addons_other/busybox $WORKDIR/mount_path/bin >> $LOGFILE 2>&1
-		#chmod 0755 $WORKDIR/mount_path/bin/busybox >> $LOGFILE 2>&1
 
 ;;
 1) ;;
