@@ -1,4 +1,4 @@
-dialog --title "ROOT" \--yesno "Do you want you want to root the ROM by including SuperSU? :-) " 7 60
+dialog --title "ROOT" \--yesno "Do you want to root the ROM by including SuperSU? :-) " 7 60
 
 response=$?
 case $response in
