@@ -2,6 +2,10 @@
 WORKDIR=$(pwd)
 _temp="$WORKDIR/working/answer.$$"
 LOGFILE=$WORKDIR/logfile
+ELEVATE=
+
+#if you need elevated privs, uncomment below
+#ELEVATE=sudo
 
 # clean up if process is cancelled
 function functClean

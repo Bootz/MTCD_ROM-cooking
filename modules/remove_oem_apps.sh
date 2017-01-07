@@ -1,11 +1,11 @@
 # cd to dir so ls -d is working
 
-umount $WORKDIR/mount_path/
+$ELEVATE umount $WORKDIR/mount_path/
 
 # mounting image
 echo
 echo "mounting oem.img"
-mount $WORKDIR/working/dupdate.img.dump/Image/oem.img $WORKDIR/mount_path >> $LOGFILE 2>&1
+$ELEVATE mount $WORKDIR/working/dupdate.img.dump/Image/oem.img $WORKDIR/mount_path >> $LOGFILE 2>&1
 
 
 cd $WORKDIR/mount_path/apk/preinstall

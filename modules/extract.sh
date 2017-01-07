@@ -9,7 +9,7 @@ $WORKDIR/helper/imgrepackerrk $WORKDIR/working/dupdate.img
 # mounting image
 echo
 echo "mounting system.img"
-mount $WORKDIR/working/dupdate.img.dump/Image/system.img $WORKDIR/mount_path
+$ELEVATE mount $WORKDIR/working/dupdate.img.dump/Image/system.img $WORKDIR/mount_path
 
 if [!-d "$WORKDIR/mount_path/app"]; then
     echo "mounting failed! exiting...";
