@@ -1,7 +1,7 @@
 # cd to dir so ls -d is working
 cd $WORKDIR/mount_path/app
 
-blacklist=$WORKDIR/modules/removeapplist.txt
+blacklist=$WORKDIR/modules/appblacklist.txt
 pkglist=""
 n=1
 
