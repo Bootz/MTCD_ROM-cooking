@@ -23,6 +23,7 @@ case $response in
 
 		mkdir -p $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
 		chmod 0755 $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
+      setfattr -n security.selinux -v u:object_r:system_file:s0 $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
 
 
       #now we will install root per SuperSU 'update-binary' script
