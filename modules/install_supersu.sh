@@ -5,7 +5,6 @@ case $response in
 0)
 		echo "rooting ROM ..."
 
-
 		SUPATH=$WORKDIR/addons_other/SuperSU/armv7
 		COMPATH=$WORKDIR/addons_other/SuperSU/common
 
@@ -14,7 +13,7 @@ case $response in
 				# source target chmod
 				cp -a $1 $2 >> $LOGFILE 2>&1
 				chmod $3 $2 >> $LOGFILE 2>&1
-            chcon $4 $2 >> $LOGFILE 2>&1
+            setfattr -n security.selinux -v $4 $2 >> $LOGFILE 2>&1
             chown root:root $2 >> $LOGFILE 2>&1
 		}
 
