@@ -20,6 +20,7 @@ case $response in
 		# make directories we need
 		mkdir -p $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
 		chmod 0755 $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
+      setfattr -n security.selinux -v u:object_r:system_file:s0 $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
 
 		mkdir -p $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
 		chmod 0755 $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
