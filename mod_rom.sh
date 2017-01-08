@@ -3,10 +3,6 @@ WORKDIR=$(pwd)
 _temp="$WORKDIR/working/answer.$$"
 LOGFILE=$WORKDIR/logfile
 
-#if working doesn't exist because it was deleted in a previous run
-#we need to create it
-mkdir -p $WORKDIR/working
-
 # clean up if process is cancelled
 function functClean
 {
@@ -21,6 +17,13 @@ function functClean
 	rm -rf $WORKDIR/working/*
 	echo
 }
+
+#start clean
+functClean
+
+#if working doesn't exist because it was deleted in a previous run
+#we need to create it
+mkdir -p $WORKDIR/working
 
 # remove old logfile
 if [ -f $LOGFILE ]; then
