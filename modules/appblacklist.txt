@@ -3,4 +3,6 @@ GoogleEmail
 HoloSpiralWallpaper
 VisualizationWallpapers
 Music
+MTCMusic4
 MTCIpod4
+Calculator

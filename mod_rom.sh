@@ -43,6 +43,7 @@ fi
 
 . $WORKDIR/modules/remove_apps.sh
 . $WORKDIR/modules/timeformat.sh
+. $WORKDIR/modules/pixeldensity.sh
 . $WORKDIR/modules/choose_addons.sh
 . $WORKDIR/modules/language.sh
 . $WORKDIR/modules/performance.sh
