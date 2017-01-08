@@ -18,6 +18,13 @@ function functClean
 	echo
 }
 
+#start clean
+functClean
+
+#if working doesn't exist because it was deleted in a previous run
+#we need to create it
+mkdir -p $WORKDIR/working
+
 # remove old logfile
 if [ -f $LOGFILE ]; then
 	rm $LOGFILE
@@ -41,6 +48,7 @@ fi
 . $WORKDIR/modules/performance.sh
 . $WORKDIR/modules/unify_memory.sh
 . $WORKDIR/modules/install_supersu.sh
+#. $WORKDIR/modules/governor.sh
 
 # not working or not necessary
 #. $WORKDIR/modules/enable_init.d.sh
@@ -59,5 +67,5 @@ functClean
 echo
 echo "finished!!!"
 echo "your modified ROM is here: $WORKDIR/output_image/dupdate.img"
-echo "logilfe is here: $WORKDIR/logfile"
+echo "logfile is here: $WORKDIR/logfile"
 echo

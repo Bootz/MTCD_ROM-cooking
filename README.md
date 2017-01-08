@@ -20,7 +20,7 @@ e.g. on Ubuntu 16.04 LTS use this:
 2. git clone https://github.com/da-anton/MTCD_ROM-cooking/
 3. cd MTCD_ROM-cooking
 4. download a MTCD ROM to the folder orig_image (only dupdate.img!)
-5. ./mod_rom.sh
+5. sudo ./mod_rom.sh
 6. choose what you want
 7. the final ROM is in the folder mod_image
 
