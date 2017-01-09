@@ -13,9 +13,12 @@ echo "mounting system.img"
 mount $WORKDIR/working/dupdate.img.dump/Image/system.img $WORKDIR/mount_path >> $LOGFILE 2>&1
 
 if [ ! -d $WORKDIR/mount_path/app ]; then
-    echo "mounting failed! exiting..."
-    functClean
-    exit;
+   echo "mounting failed! exiting..."
+   functClean
+   exit;
+else
+   echo "bugfix: one file in mount_path/bin has wrong owner...?"
+   chown root:2000 $WORKDIR/mount_path/bin/displayd
 fi
 
 echo "done mounting"

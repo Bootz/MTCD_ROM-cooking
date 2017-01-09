@@ -11,18 +11,22 @@ case $response in
 		function copy_chmod_chcon
 		{
 				# source target chmod
-				cp -a $1 $2 >> $LOGFILE 2>&1
-				chmod $3 $2 >> $LOGFILE 2>&1
+            echo "" >> $LOGFILE 2>&1
+				cp -a -v $1 $2 >> $LOGFILE 2>&1
+				chmod -v $3 $2 >> $LOGFILE 2>&1
+            echo "setting extended attributes..." >> $LOGFILE 2>&1
             setfattr -n security.selinux -v $4 $2 >> $LOGFILE 2>&1
-            chown root:root $2 >> $LOGFILE 2>&1
+            chown -v root:root $2 >> $LOGFILE 2>&1
 		}
 
 		# make directories we need
 		mkdir -p $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
 		chmod 0755 $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
+      setfattr -n security.selinux -v u:object_r:system_file:s0 $WORKDIR/mount_path/app/SuperSU >> $LOGFILE 2>&1
 
 		mkdir -p $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
 		chmod 0755 $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
+      setfattr -n security.selinux -v u:object_r:system_file:s0 $WORKDIR/mount_path/etc/init.d >> $LOGFILE 2>&1
 
 
       #now we will install root per SuperSU 'update-binary' script
@@ -43,8 +47,8 @@ case $response in
 		copy_chmod_chcon $SUPATH/libsupol.so $WORKDIR/mount_path/lib/libsupol.so 0644 u:object_r:system_file:s0
 
       #move original app_process32 to new name and install our new app_process32 which is symlinked to daemonsu
-		copy_chmod_chcon -a $WORKDIR/mount_path/bin/app_process32 $WORKDIR/mount_path/bin/app_process32_original 0755 u:object_r:zygote_exec:s0
-		copy_chmod_chcon -a $WORKDIR/mount_path/bin/app_process32 $WORKDIR/mount_path/bin/app_process_init 0755 u:object_r:zygote_exec:s0
+		copy_chmod_chcon $WORKDIR/mount_path/bin/app_process32 $WORKDIR/mount_path/bin/app_process32_original 0755 u:object_r:zygote_exec:s0
+		copy_chmod_chcon $WORKDIR/mount_path/bin/app_process32 $WORKDIR/mount_path/bin/app_process_init 0755 u:object_r:system_file:s0
 		rm -f $WORKDIR/mount_path/bin/app_process32 >> $LOGFILE 2>&1
 		rm -f $WORKDIR/mount_path/bin/app_process >> $LOGFILE 2>&1
 

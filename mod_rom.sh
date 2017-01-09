@@ -43,12 +43,12 @@ fi
 
 . $WORKDIR/modules/remove_apps.sh
 . $WORKDIR/modules/timeformat.sh
+. $WORKDIR/modules/pixeldensity.sh
 . $WORKDIR/modules/choose_addons.sh
 . $WORKDIR/modules/language.sh
 . $WORKDIR/modules/performance.sh
 . $WORKDIR/modules/unify_memory.sh
 . $WORKDIR/modules/install_supersu.sh
-#. $WORKDIR/modules/governor.sh
 
 # not working or not necessary
 #. $WORKDIR/modules/enable_init.d.sh
