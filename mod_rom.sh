@@ -57,6 +57,10 @@ fi
 # must be the last one as we have to mount a different image
 . $WORKDIR/modules/remove_oem_apps.sh
 
+# stop for debugging if necessary
+#read -p "Press any key to continue... " -n1 -s
+
+
 # baking rom
 . $WORKDIR/modules/baking_rom.sh
 
