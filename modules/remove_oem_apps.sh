@@ -8,7 +8,15 @@ echo "mounting oem.img"
 mount $WORKDIR/working/dupdate.img.dump/Image/oem.img $WORKDIR/mount_path >> $LOGFILE 2>&1
 
 
-cd $WORKDIR/mount_path/apk/preinstall
+if [ -d "$WORKDIR/mount_path/apk/preinstall" ]; then
+	APPDIR="$WORKDIR/mount_path/apk/preinstall"
+fi
+
+if [ -d "$WORKDIR/mount_path/apk/" ]; then
+	APPDIR="$WORKDIR/mount_path/apk/"
+fi
+
+cd $APPDIR
 
 pkglist=""
 n=1
@@ -44,7 +52,7 @@ case $response in
         for choice in $choices
         do
                 echo "Removing OEM $choice" >> $LOGFILE 2>&1
-                rm -rf $WORKDIR/mount_path/apk/preinstall/$choice >> $LOGFILE 2>&1
+                rm -rf $APPDIR/$choice >> $LOGFILE 2>&1
         done
 	;;
 
