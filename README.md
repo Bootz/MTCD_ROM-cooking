@@ -1,6 +1,6 @@
 # Introduction
 
-This repository is intended to provide scripts to crate custom MTCD ROMs for many of those Chinese headunits you can buy on Ebay, Alibaba etc. 
+This repository is intended to provide scripts to create custom MTCD ROMs for many of those Chinese headunits you can buy on Ebay, Alibaba etc. 
 
 # Requirements
 
@@ -12,11 +12,11 @@ This repository is intended to provide scripts to crate custom MTCD ROMs for man
 
 e.g. on Ubuntu 16.04 LTS use this:
 
-`apt-get install lib32ncurses5 lib32z1`
+`apt-get install lib32ncurses5 lib32z1 dialog attr wget unzip`
 
 # Installation
 
-1. install missing tool chain e.g. on Ubuntu 16.04 `apt-get install dialog wget unzip`
+1. install missing tool chain e.g. on Ubuntu 16.04 `apt-get install wget unzip lib32ncurses5 lib32z1 dialog attr`
 2. git clone https://github.com/da-anton/MTCD_ROM-cooking/
 3. cd MTCD_ROM-cooking
 4. download a MTCD ROM to the folder orig_image (only dupdate.img!)
